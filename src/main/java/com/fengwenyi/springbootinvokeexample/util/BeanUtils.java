@@ -12,7 +12,7 @@ import java.lang.reflect.Method;
  */
 public class BeanUtils {
 
-    public static Object invoke(String beanName, String methodName, Object [] args) {
+    public static Object invoke(String beanName, String methodName, Object ... args) {
         ApplicationContext applicationContext = ApplicationContextBean.getApplicationContext();
         Object bean = applicationContext.getBean(beanName);
         Class<?>[] argsClass = new Class[args.length];
